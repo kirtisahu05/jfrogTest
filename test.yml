@@ -26,7 +26,7 @@ resources:
     initialVersion:
       imageTag: latest
 
-  - name: stateResource
+  - name: stateResource_jTest
     type: state
 
   - name: webhookRes_jTest
@@ -74,7 +74,7 @@ pipelines:
           resources:
             - gitrepo_res_jTest
             - image_res_jTest
-            - stateResource
+            - stateResource_jTest
             - webhookRes_jTest
             - clusterRes_jTest
         execution:
@@ -82,4 +82,4 @@ pipelines:
             - echo "executing..."
         outputResources:
           - file_res_jTest
-          - stateResource
+          - stateResource_jTest
