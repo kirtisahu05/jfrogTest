@@ -1,0 +1,80 @@
+resources:
+  - name: gitrepo_res_jTest
+    type: gitRepo
+    repoPath: ChaitanyaVootla/newTest
+    configuration:
+      integrationName: git_chaitanya
+      branches:
+        except: random
+    initialVersion:
+      sha: master
+
+  - name: file_res_jTest
+    type: file
+    fileLocation: https://github.com/ankul-shippable/sample_java/blob/master/shippable.yml
+    configuration:
+      integrationName: git_chaitanya
+    initialVersion:
+      fileName: shippable.yml
+      fileDtTm: random_value
+
+  - name: image_res_jTest
+    type: image
+    imageName: "library/nginx"
+    configuration:
+      integrationName: docker_chaitanya
+    initialVersion:
+      imageTag: latest
+
+  - name: stateResource
+    type: state
+
+  - name: webhookRes_jTest
+    type: webhook
+    configuration:
+      integrationName: docker_chaitanya
+    initialVersion:
+      payload: "asd"
+
+  - name: clusterRes_jTest
+    type: cluster
+    configuration:
+      integrationName: docker_chaitanya
+      bastionHostIP: 1.2.3.4
+      bastionUser: sshUser
+      bastionIntegrationName: sshKeyIntegration
+
+pipelines:
+  - name: jTest_pipeline
+    setup:
+      runtime: onHost
+    steps:
+      - name: step-jTest
+        type: bash
+        configuration:
+          affinityGroup: test_group
+        setup:
+          runtime:
+            type: image
+            image:
+              auto:
+                language: java
+                versions:
+                  - 1
+            custom:
+              name: test
+              tag:  test
+              options: test
+        requires:
+          integrations:
+            - docker_jTest
+          resources:
+            - image_res_jTest
+        triggeredBy:
+          resources:
+            - gitrepo_res_jTest
+        execution:
+          onExecute:
+            - echo "executing..."
+        outputResources:
+          - file_res_jTest
