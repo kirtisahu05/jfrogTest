@@ -67,14 +67,19 @@ pipelines:
               options: test
         requires:
           integrations:
-            - docker_jTest
+            - docker_chaitanya
           resources:
             - image_res_jTest
         triggeredBy:
           resources:
             - gitrepo_res_jTest
+            - image_res_jTest
+            - stateResource
+            - webhookRes_jTest
+            - clusterRes_jTest
         execution:
           onExecute:
             - echo "executing..."
         outputResources:
           - file_res_jTest
+          - stateResource
