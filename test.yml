@@ -49,7 +49,7 @@ pipelines:
     setup:
       runtime: onHost
     steps:
-      - name: step-jTest
+      - name: step_jTest
         type: bash
         configuration:
           affinityGroup: test_group
