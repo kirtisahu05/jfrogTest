@@ -12,10 +12,10 @@ resources:
   - name: file_res_jTest
     type: file
     fileLocation: https://raw.githubusercontent.com/ChaitanyaVootla/jfrogTest/master/test.yml
+    fileName: shippable.yml
     configuration:
       integrationName: git_chaitanya
     initialVersion:
-      fileName: shippable.yml
       fileDtTm: random_value
 
   - name: image_res_jTest
