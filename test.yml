@@ -28,6 +28,16 @@ resources:
 
   - name: stateResource_jTest
     type: state
+    initialVersion:
+      key1: "value1"
+      key2: "value2"
+      key3: "value3"
+      key4: "value4"
+      key5: "value5"
+      key6: "value6"
+      key7: "value7"
+      key8: "value8"
+      key9: "value9"
 
   - name: webhookRes_jTest
     type: webhook
@@ -43,6 +53,20 @@ resources:
       bastionHostIP: 1.2.3.4
       bastionUser: sshUser
       bastionIntegrationName: sshKeyIntegration
+    initialVersion:
+      targetCount: 12
+      targetIP01: 1.2.3.4
+      targetIP02: 1.2.3.5
+      targetIP03: 1.2.3.6
+      targetIP04: 1.2.3.4
+      targetIP05: 1.2.3.5
+      targetIP06: 1.2.3.6
+      targetIP07: 1.2.3.4
+      targetIP08: 1.2.3.5
+      targetIP09: 1.2.3.6
+      targetIP10: 1.2.3.4
+      targetIP11: 1.2.3.5
+      targetIP12: 1.2.3.6
 
 pipelines:
   - name: jTest_pipeline
