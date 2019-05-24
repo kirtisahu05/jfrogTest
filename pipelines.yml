@@ -3,7 +3,7 @@ resources:
     type: gitRepo
     repoPath: kirtisahu05/newTest
     configuration:
-      integrationName: git_kirti
+      integrationName: github_kirti
       branches:
         except: random
     initialVersion:
@@ -11,10 +11,10 @@ resources:
 
   - name: file_res_jTest
     type: file
-    fileLocation: https://raw.githubusercontent.com/kirtisahu05/jfrogTest/master/test.yml
+    fileLocation: https://raw.githubusercontent.com/kirtisahu05/jfrogTest/master/pipelines.yml
     fileName: shippable.yml
     configuration:
-      integrationName: git_kirti
+      integrationName: github_kirti
     initialVersion:
       fileDtTm: random_value
 
