@@ -32,7 +32,7 @@ resources:
     configuration:
       integrationName: docker_kirti
     initialVersion:
-      payload: "asd123"
+      payload: "asd123-new"
 
   - name: clusterRes_jTest
     type: cluster
