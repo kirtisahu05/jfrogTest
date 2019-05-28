@@ -44,7 +44,6 @@ resources:
     initialVersion:
       targetCount: 1
       targetIP01: 1.2.3.4
-      targetIP02: 1.2.3.4
 
 pipelines:
   - name: jTest_pipeline
