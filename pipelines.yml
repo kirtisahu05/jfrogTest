@@ -49,6 +49,10 @@ pipelines:
   - name: jTest_pipeline
     setup:
       runtime: onHost
+      environmentVariables:
+        readOnly:
+          ENV1: value1
+          ENV2: value2  
     steps:
       - name: step_jTest
         type: bash
