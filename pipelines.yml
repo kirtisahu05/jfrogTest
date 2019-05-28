@@ -49,16 +49,23 @@ pipelines:
   - name: jTest_pipeline
     setup:
       runtime: onHost
-      environmentVariables:
-        readOnly:
-          ENV1: value1
-          ENV2: value2  
+#       environmentVariables:
+#         readOnly:
+#           ENV1: value1
+#           ENV2: value2  
     steps:
       - name: step_jTest
         type: bash
         configuration:
           affinityGroup: test_group
         setup:
+           environmentVariables:
+            normal:
+              ENV1: value1
+              ENV2: value2
+            encrypted:
+              SECURE_ENV1: <encrypted secure>
+              SECURE_ENV2: <encrypted secure>
           runtime:
             type: image
             image:
