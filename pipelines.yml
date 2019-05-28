@@ -42,7 +42,7 @@ resources:
       bastionUser: sshUser
       bastionIntegrationName: sshKeyIntegration
     initialVersion:
-      targetCount: 12
+      targetCount: 125
       targetIP01: 1.2.3.4
 
 pipelines:
