@@ -85,5 +85,6 @@ pipelines:
         execution:
           onExecute:
             - echo "executing..."
+            - write_output file_res_jTest "fileDtTm"=$STEP_ID
         outputResources:
           - file_res_jTest
