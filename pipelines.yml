@@ -51,7 +51,6 @@ resources:
       targetIP07: 1.2.3.4
       targetIP08: 1.2.3.5
       targetIP09: 1.2.3.6
-      targetIP10: 1.2.3.4
       targetIP11: 1.2.3.5
       targetIP12: 1.2.3.6
 
