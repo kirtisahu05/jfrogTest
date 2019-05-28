@@ -64,8 +64,8 @@ pipelines:
               ENV1: value1
               ENV2: value2
             encrypted:
-              SECURE_ENV1: <encrypted secure>
-              SECURE_ENV2: <encrypted secure>
+              SECURE_ENV1: asd
+              SECURE_ENV2: asd
           runtime:
             type: image
             image:
