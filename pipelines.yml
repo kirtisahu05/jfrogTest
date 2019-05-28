@@ -42,17 +42,8 @@ resources:
       bastionUser: sshUser
       bastionIntegrationName: sshKeyIntegration
     initialVersion:
-      targetCount: 14
+      targetCount: 1
       targetIP01: 1.2.3.4
-      targetIP03: 1.2.3.6
-      targetIP04: 1.2.3.4
-      targetIP05: 1.2.3.5
-      targetIP06: 1.2.3.6
-      targetIP07: 1.2.3.4
-      targetIP08: 1.2.3.5
-      targetIP09: 1.2.3.6
-      targetIP11: 1.2.3.5
-      targetIP12: 1.2.3.6
 
 pipelines:
   - name: jTest_pipeline
