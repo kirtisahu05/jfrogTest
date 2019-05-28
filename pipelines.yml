@@ -44,7 +44,6 @@ resources:
     initialVersion:
       targetCount: 12
       targetIP01: 1.2.3.4
-      targetIP02: 1.2.3.5
       targetIP03: 1.2.3.6
       targetIP04: 1.2.3.4
       targetIP05: 1.2.3.5
