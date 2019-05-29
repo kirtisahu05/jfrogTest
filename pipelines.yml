@@ -31,7 +31,7 @@ resources:
     configuration:
       integrationName: github_kirti
     version:
-      payload: "asd12sfdf"
+      payload: "asd1df"
 
   - name: clusterRes_jTest
     type: cluster
