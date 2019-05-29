@@ -11,7 +11,7 @@ resources:
 
   - name: file_res_jTest
     type: file
-    fileLocation: https://raw.githubusercontent.com/ChaitanyaVootla/jfrogTest/master/pipelines.yml
+    fileLocation: https://raw.githubusercontent.com/kirtisahu05/jfrogTest/master/pipelines.yml
     fileName: shippable.yml
     configuration:
       integrationName: github_kirti
@@ -96,7 +96,7 @@ pipelines:
 #           affinityGroup: test_group
 #         requires:
 #           integrations:
-#             - docker_chaitanya
+#             - docker_kirti
 #         triggeredBy:
 #           resources:
 #             - gitrepo_res_jTest
