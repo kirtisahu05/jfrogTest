@@ -1,21 +1,21 @@
 resources:
   - name: gitrepo_res_jTest
     type: gitRepo
-    repoPath: kirtisahu05/newTest
+    repoPath: kirtisahu05/jfrogTest
     configuration:
       integrationName: github_kirti
       branches:
         except: random
-    initialVersion:
+    version:
       sha: master
 
   - name: file_res_jTest
     type: file
-    fileLocation: https://raw.githubusercontent.com/kirtisahu05/jfrogTest/master/pipelines.yml
+    fileLocation: https://raw.githubusercontent.com/ChaitanyaVootla/jfrogTest/master/pipelines.yml
     fileName: shippable.yml
     configuration:
       integrationName: github_kirti
-    initialVersion:
+    version:
       fileDtTm: random_value
 
   - name: image_res_jTest
@@ -23,16 +23,15 @@ resources:
     imageName: "library/nginx"
     configuration:
       integrationName: docker_kirti
-    initialVersion:
+    version:
       imageTag: latest
-
 
   - name: webhookRes_jTest
     type: webhook
     configuration:
-      integrationName: docker_kirti
-    initialVersion:
-      payload: "asd123-new"
+      integrationName: github_kirti
+    version:
+      payload: "asd"
 
   - name: clusterRes_jTest
     type: cluster
@@ -41,49 +40,130 @@ resources:
       bastionHostIP: 1.2.3.4
       bastionUser: sshUser
       bastionIntegrationName: sshKeyIntegration
-    initialVersion:
-      targetCount: 125
-      targetIP01: 1.2.3.4
 
 pipelines:
-  - name: jTest_pipeline
+  - name: img_test_pipeline
     setup:
       runtime: onHost
-#       environmentVariables:
-#         readOnly:
-#           ENV1: value1
-#           ENV2: value2  
     steps:
       - name: step_jTest
         type: bash
         configuration:
           affinityGroup: test_group
-        setup:
-          environmentVariables:
-            normal:
-              ENV1: value1
-              ENV2: value2
-          runtime:
-            type: image
-            image:
-              auto:
-                language: java
-                versions:
-                  - ver_1
         requires:
           integrations:
             - docker_kirti
-          resources:
-            - image_res_jTest
         triggeredBy:
           resources:
             - gitrepo_res_jTest
-            - image_res_jTest
             - webhookRes_jTest
             - clusterRes_jTest
         execution:
           onExecute:
             - echo "executing..."
-            - write_output file_res_jTest "fileDtTm"=$STEP_ID
         outputResources:
           - file_res_jTest
+          - image_res_jTest
+      - name: img_test_push
+        type: bash
+        triggeredBy:
+          steps:
+            - step_jTest
+        execution:
+          onExecute:
+            - printenv
+            - write_output image_res_jTest "imageTag="$STEP_ID
+        outputResources:
+          - image_res_jTest
+        requires:
+          integrations:
+            - github_kirti
+      - name: img_read_Asdasdasdasdasdasdasdasdasdasdasdasdasdasd
+        type: bash
+        execution:
+          onExecute:
+            - printenv
+        requires:
+          resources:
+            - image_res_jTest
+#   - name: overlap_test
+#     setup:
+#       runtime: onHost
+#     steps:
+#       - name: over1 
+#         type: bash
+#         configuration:
+#           affinityGroup: test_group
+#         requires:
+#           integrations:
+#             - docker_chaitanya
+#         triggeredBy:
+#           resources:
+#             - gitrepo_res_jTest
+#             - webhookRes_jTest
+#             - clusterRes_jTest
+#         execution:
+#           onExecute:
+#             - echo "executing..."
+#       - name: over2_1
+#         type: bash
+#         triggeredBy:
+#           steps:
+#             - over1
+#         execution:
+#           onExecute:
+#             - printenv
+#             - write_output image_res_jTest "imageTag="$STEP_ID
+#         outputResources:
+#           - image_res_jTest
+#       - name: over2_3
+#         type: bash
+#         execution:
+#           onExecute:
+#             - printenv
+#         triggeredBy:
+#           steps:
+#             - over1
+#       - name: over2_4
+#         type: bash
+#         execution:
+#           onExecute:
+#             - printenv
+#         triggeredBy:
+#           steps:
+#             - over1
+#       - name: over2_5
+#         type: bash
+#         execution:
+#           onExecute:
+#             - printenv
+#         triggeredBy:
+#           steps:
+#             - over1
+#       - name: over2_2
+#         type: bash
+#         execution:
+#           onExecute:
+#             - printenv
+#         requires:
+#           resources:
+#             - webhookRes_jTest
+#         triggeredBy:
+#           steps:
+#             - over1
+#       - name: over3_1
+#         type: bash
+#         execution:
+#           onExecute:
+#             - printenv
+#         triggeredBy:
+#           steps:
+#             - over2_1
+#       - name: over3_2
+#         type: bash
+#         execution:
+#           onExecute:
+#             - printenv
+#         triggeredBy:
+#           steps:
+#             - over2_1
