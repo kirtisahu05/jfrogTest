@@ -50,11 +50,11 @@ pipelines:
         type: bash
         configuration:
           affinityGroup: test_group
-#         setup:
-#           environmentVariables:
-#             normal:
-#               ENV1: value1
-#               ENV2: value2
+        setup:
+          environmentVariables:
+            normal:
+              ENV1: value1
+              ENV2: value2
         requires:
           integrations:
             - docker_kirti
