@@ -44,6 +44,10 @@ resources:
 pipelines:
   - name: img_test_pipeline
     setup:
+      environmentVariables:
+        readOnly:
+          PIPELINE_ENV1: default_value1
+          PIPELINE_ENV2: default_value2
       runtime: onHost
     steps:
       - name: step_jTest
@@ -53,8 +57,8 @@ pipelines:
         setup:
           environmentVariables:
             normal:
-              ENV1: value1
-              ENV2: value2
+              STEP_ENV1: default_value1
+              STEP_ENV2: default_value2
         requires:
           integrations:
             - docker_kirti
