@@ -1,6 +1,6 @@
 resources:
   - name: gitrepo_res_jTest
-    type: gitRepo
+    type: GitRepo
     repoPath: kirtisahu05/jfrogTest
     configuration:
       integrationName: github_kirti
@@ -10,7 +10,7 @@ resources:
       sha: master
 
   - name: file_res_jTest
-    type: file
+    type: FileSpec
     fileLocation: https://raw.githubusercontent.com/kirtisahu05/jfrogTest/master/pipelines.yml
     fileName: shippable.yml
     configuration:
@@ -19,7 +19,7 @@ resources:
       fileDtTm: random_value
 
   - name: image_res_jTest
-    type: image
+    type: Image
     imageName: "library/nginx"
     configuration:
       integrationName: docker_kirti
@@ -27,14 +27,14 @@ resources:
       imageTag: latest
 
   - name: webhookRes_jTest
-    type: webhook
+    type: Webhook
     configuration:
       integrationName: github_kirti
     version:
       payload: "asd1234567"
 
   - name: clusterRes_jTest
-    type: cluster
+    type: VmCluster
     configuration:
       integrationName: docker_kirti
       bastionHostIP: 1.2.3.4
@@ -51,7 +51,7 @@ pipelines:
       runtime: onHost
     steps:
       - name: step_jTest
-        type: bash
+        type: Bash
         configuration:
           affinityGroup: test_group
         setup:
@@ -88,7 +88,7 @@ pipelines:
           integrations:
             - github_kirti
       - name: img_read_Asdasdasdasdasdasdasdasdasdasdasdasdasdasd
-        type: bash
+        type: Bash
         execution:
           onExecute:
             - printenv
