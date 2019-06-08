@@ -1,178 +1,227 @@
 resources:
-  - name: gitrepo_res_jTest
+  - name: app1
     type: GitRepo
-    repoPath: kirtisahu05/jfrogTest
     configuration:
-      integrationName: github_kirti
+      gitProvider: github_kirti
+      path: kirtisahu05/jfrogTest
       branches:
-        except: random
-    version:
-      sha: master
+        include: master
 
-  - name: file_res_jTest
-    type: FileSpec
-    fileLocation: https://raw.githubusercontent.com/kirtisahu05/jfrogTest/master/pipelines.yml
-    fileName: shippable.yml
-    configuration:
-      integrationName: github_kirti
-    version:
-      fileDtTm: random_value
-
-  - name: image_res_jTest
+  - name: myDockerImg
     type: Image
-    imageName: "library/nginx"
     configuration:
-      integrationName: docker_kirti
-    version:
+      registry: artDocker
+      imageName: demo/app
       imageTag: latest
+      autoPull: false
 
-  - name: webhookRes_jTest
-    type: Webhook
-    configuration:
-      integrationName: github_kirti
-    version:
-      payload: "asd1234567"
 
-  - name: clusterRes_jTest
-    type: VmCluster
-    configuration:
-      integrationName: docker_kirti
-      bastionHostIP: 1.2.3.4
-      bastionUser: sshUser
-      bastionIntegrationName: sshKeyIntegration
+  # - name: myState
+  #   type: state
+  #
+  # - name: p2pWebhook
+  #   type: webhook
+  #   configuration:
+  #     integrationName: intWebhook
+  #   initialVersion:
+  #     payload: "foo=bar"
+  #
+  # - name: extWebhook
+  #   type: webhook
+  #   configuration:
+  #     integrationName: myExtWebhook
+  #   initialVersion:
+  #     payload: "foo=bar"
 
 pipelines:
-  - name: img_test_pipeline
-    setup:
-      environmentVariables:
-        readOnly:
-          PIPELINE_ENV1: default_value1
-          PIPELINE_ENV2: default_value2
-      runtime: onHost
+
+  - name: test_pipeline
     steps:
-      - name: step_jTest
+      - name: build
         type: Bash
         configuration:
-          affinityGroup: test_group
-        setup:
-          environmentVariables:
-            normal:
-              STEP_ENV1: default_value1
-              STEP_ENV2: default_value2
-        requires:
+          affinityGroup: build
           integrations:
-            - docker_kirti
-        triggeredBy:
-          resources:
-            - gitrepo_res_jTest
-            - webhookRes_jTest
-            - clusterRes_jTest
-        execution:
-          onExecute:
-            - echo "executing..."
-        outputResources:
-          - file_res_jTest
-          - image_res_jTest
-      - name: img_test_push
-        type: bash
-        triggeredBy:
-          steps:
-            - step_jTest
+            - name: notifySlack
+          inputResources:
+            - name: app1
+          outputResources:
+            - name: myDockerImg
         execution:
           onExecute:
             - printenv
-            - write_output image_res_jTest "imageTag="$STEP_ID
-        outputResources:
-          - image_res_jTest
-        requires:
-          integrations:
-            - github_kirti
-      - name: img_read_Asdasdasdasdasdasdasdasdasdasdasdasdasdasd
+            - pushd $res_app1_resourcePath
+            - docker build -t app1:$step_id .
+            - write_output myDockerImg "imageTag="$step_id
+            - add_run_variable imageName=$res_myDockerImg_imageName
+            - add_run_variable imageTag=$step_id
+            - add_pipeline_variable intName=$res_myDockerImg_integrationName
+            - add_pipeline_variable pullSetting=$res_myDockerImg_autoPull
+          onSuccess:
+            - send_notification notifySlack --text "this is a custom message"
+
+
+      - name: test
         type: Bash
+        configuration:
+          affinityGroup: build
+          inputResources:
+            - name: myDockerImg
         execution:
           onExecute:
             - printenv
-        requires:
-          resources:
-            - image_res_jTest
-#   - name: overlap_test
-#     setup:
-#       runtime: onHost
-#     steps:
-#       - name: over1 
-#         type: bash
-#         configuration:
-#           affinityGroup: test_group
-#         requires:
-#           integrations:
-#             - docker_kirti
-#         triggeredBy:
-#           resources:
-#             - gitrepo_res_jTest
-#             - webhookRes_jTest
-#             - clusterRes_jTest
-#         execution:
-#           onExecute:
-#             - echo "executing..."
-#       - name: over2_1
-#         type: bash
-#         triggeredBy:
-#           steps:
-#             - over1
-#         execution:
-#           onExecute:
-#             - printenv
-#             - write_output image_res_jTest "imageTag="$STEP_ID
-#         outputResources:
-#           - image_res_jTest
-#       - name: over2_3
-#         type: bash
-#         execution:
-#           onExecute:
-#             - printenv
-#         triggeredBy:
-#           steps:
-#             - over1
-#       - name: over2_4
-#         type: bash
-#         execution:
-#           onExecute:
-#             - printenv
-#         triggeredBy:
-#           steps:
-#             - over1
-#       - name: over2_5
-#         type: bash
-#         execution:
-#           onExecute:
-#             - printenv
-#         triggeredBy:
-#           steps:
-#             - over1
-#       - name: over2_2
-#         type: bash
-#         execution:
-#           onExecute:
-#             - printenv
-#         requires:
-#           resources:
-#             - webhookRes_jTest
-#         triggeredBy:
-#           steps:
-#             - over1
-#       - name: over3_1
-#         type: bash
-#         execution:
-#           onExecute:
-#             - printenv
-#         triggeredBy:
-#           steps:
-#             - over2_1
-#       - name: over3_2
-#         type: bash
-#         execution:
-#           onExecute:
-#             - printenv
-#         triggeredBy:
-#           steps:
-#             - over2_1
+            - docker run --name "test_app" app1:$res_myDockerImg_imageTag bash -c "pwd"
+            - docker rm -fv "test_app"
+            - echo $res_myDockerImg_imageTag
+            - echo $imageName
+            - echo $imageTag
+            - echo $pullSetting
+            - echo $intName
+
+      - name: parallel_1
+        type: Bash
+        configuration:
+          affinityGroup: build
+          inputSteps:
+            - name: test
+        execution:
+          onExecute:
+            - printenv
+            - echo $imageTag
+
+
+      - name: parallel_2
+        type: Bash
+        configuration:
+          affinityGroup: build
+          inputSteps:
+            - name: test
+        execution:
+          onExecute:
+            - printenv
+
+      - name: parallel_3
+        type: Bash
+        configuration:
+          affinityGroup: build
+          inputSteps:
+            - name: test
+        execution:
+          onExecute:
+            - printenv
+
+      - name: push
+        type: Bash
+        configuration:
+          affinityGroup: build
+          inputSteps:
+            - name: parallel_2
+            - name: parallel_1
+            - name: parallel_3
+          integrations:
+            - name: artDocker
+            - name: notifySlack
+        execution:
+          onExecute:
+            - docker login -u $int_artDocker_username -p $int_artDocker_password $int_artDocker_url
+            - artDockerIp=$(echo $int_artDocker_url | awk -F[/:] '{print $4}')
+            - artDockerPort=$(echo $int_artDocker_url | awk -F[/:] '{print $5}')
+            - echo "$artDockerIp:$artDockerPort"
+            - docker tag app1:$imageTag $artDockerIp:$artDockerPort/$imageName:$imageTag
+            - docker push $artDockerIp:$artDockerPort/$imageName:$imageTag
+            - echo $pullSetting
+            - echo $intName
+            - echo "Changing the world"
+          onSuccess:
+            - send_notification notifySlack --text "push is done"
+
+  - name: second_test_pipeline
+    steps:
+      - name: first_step
+        type: Bash
+        configuration:
+          inputResources:
+            - name: app1
+        execution:
+          onExecute:
+            - printenv
+
+
+  #
+  #
+  # - name: ci_pipeline
+  #   steps:
+  #     - name: build
+  #       type: bash
+  #       setup:
+  #         runtime:
+  #           type: image
+  #           image:
+  #            custom:
+  #              name: drydock/u16all
+  #              tag: master
+  #       triggeredBy:
+  #         resources:
+  #           - app
+  #       execution:
+  #         onExecute:
+  #           - pushd $res_app_resourcePath
+  #           - docker build -t app:latest .
+  #
+  #     - name: test
+  #       type: bash
+  #       setup:
+  #         runtime:
+  #           type: image
+  #           image:
+  #            custom:
+  #              name: drydock/u16all
+  #              tag: master
+  #       triggeredBy:
+  #         steps:
+  #           - build
+  #       execution:
+  #         onExecute:
+  #           - docker run --name "test_app" app:latest bash -c "pwd"
+  #           - docker rm -fv "test_app"
+  #
+  #     - name: push
+  #       type: bash
+  #       setup:
+  #         runtime:
+  #           type: image
+  #           image:
+  #            custom:
+  #              name: drydock/u16all
+  #              tag: master
+  #       requires:
+  #         integrations:
+  #           - artDocker
+  #       triggeredBy:
+  #         steps:
+  #           - test
+  #       execution:
+  #         onExecute:
+  #           - docker login -u $int_artDocker_username -p $int_artDocker_password $int_artDocker_url
+  #           - artDockerIp=$(echo $int_artDocker_url | awk -F[/:] '{print $4}')
+  #           - artDockerPort=$(echo $int_artDocker_url | awk -F[/:] '{print $5}')
+  #           - echo "$artDockerIp:$artDockerPort"
+  #           - docker tag app:latest $artDockerIp:$artDockerPort/demo/app:$STEP_ID
+  #           - docker push $artDockerIp:$artDockerPort/demo/app:$STEP_ID
+  #
+  #     - name: job2
+  #       type: bash
+  #       setup:
+  #         runtime:
+  #           type: image
+  #           image:
+  #            custom:
+  #              name: drydock/u16all
+  #              tag: master
+  #
+  #       triggeredBy:
+  #         steps:
+  #           - build
+  #       execution:
+  #         onExecute:
+  #           - echo "job2...."
