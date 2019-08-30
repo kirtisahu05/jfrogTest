@@ -1,227 +1,210 @@
 resources:
-  - name: app1
+  - name: gitResource
     type: GitRepo
     configuration:
       gitProvider: github_kirti
-      path: kirtisahu05/jfrogTest
-      branches:
-        include: master
-
-  - name: myDockerImg
-    type: Image
-    configuration:
-      registry: artifactoryIntegration
-      imageName: demo/app
-      imageTag: latest
-      autoPull: false
-
-
-  # - name: myState
-  #   type: state
-  #
-  # - name: p2pWebhook
-  #   type: webhook
-  #   configuration:
-  #     integrationName: intWebhook
-  #   initialVersion:
-  #     payload: "foo=bar"
-  #
-  # - name: extWebhook
-  #   type: webhook
-  #   configuration:
-  #     integrationName: myExtWebhook
-  #   initialVersion:
-  #     payload: "foo=bar"
-
-pipelines:
-
-  - name: test_pipeline
+      path: kirtisahu05/ymlTest
+pipelines: 
+  - name: state_test
     steps:
-      - name: build
+      - name: testReport_u18
         type: Bash
         configuration:
-          affinityGroup: build
-          integrations:
-            - name: notifySlack
           inputResources:
-            - name: app1
-          outputResources:
-            - name: myDockerImg
+            - name: gitResource
         execution:
           onExecute:
-            - printenv
-            - pushd $res_app1_resourcePath
-            - docker build -t app1:$step_id .
-            - write_output myDockerImg "imageTag="$step_id
-            - add_run_variable imageName=$res_myDockerImg_imageName
-            - add_run_variable imageTag=$step_id
-            - add_pipeline_variable intName=$res_myDockerImg_integrationName
-            - add_pipeline_variable pullSetting=$res_myDockerImg_autoPull
-          onSuccess:
-            - send_notification notifySlack --text "this is a custom message"
-
-
-      - name: test
+            - pushd $res_gitResource_resourcePath
+            - sudo chmod +x echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+            - ./echoTest.sh
+      
+      - name: run_file_restore
         type: Bash
         configuration:
-          affinityGroup: build
-          inputResources:
-            - name: myDockerImg
-        execution:
-          onExecute:
-            - printenv
-            - docker run --name "test_app" app1:$res_myDockerImg_imageTag bash -c "pwd"
-            - docker rm -fv "test_app"
-            - echo $res_myDockerImg_imageTag
-            - echo $imageName
-            - echo $imageTag
-            - echo $pullSetting
-            - echo $intName
-
-      - name: parallel_1
-        type: Bash
-        configuration:
-          affinityGroup: build
           inputSteps:
-            - name: test
+            - name: testReport_u18
         execution:
           onExecute:
             - printenv
-            - echo $imageTag
-
-
-      - name: parallel_2
-        type: Bash
-        configuration:
-          affinityGroup: build
-          inputSteps:
-            - name: test
-        execution:
-          onExecute:
-            - printenv
-
-      - name: parallel_3
-        type: Bash
-        configuration:
-          affinityGroup: build
-          inputSteps:
-            - name: test
-        execution:
-          onExecute:
-            - printenv
-
-      - name: push
-        type: Bash
-        configuration:
-          affinityGroup: build
-          inputSteps:
-            - name: parallel_2
-            - name: parallel_1
-            - name: parallel_3
-          integrations:
-            - name: artDocker
-            - name: notifySlack
-        execution:
-          onExecute:
-            - docker login -u $int_artDocker_username -p $int_artDocker_password $int_artDocker_url
-            - artDockerIp=$(echo $int_artDocker_url | awk -F[/:] '{print $4}')
-            - artDockerPort=$(echo $int_artDocker_url | awk -F[/:] '{print $5}')
-            - echo "$artDockerIp:$artDockerPort"
-            - docker tag app1:$imageTag $artDockerIp:$artDockerPort/$imageName:$imageTag
-            - docker push $artDockerIp:$artDockerPort/$imageName:$imageTag
-            - echo $pullSetting
-            - echo $intName
-            - echo "Changing the world"
-          onSuccess:
-            - send_notification notifySlack --text "push is done"
-
-  - name: second_test_pipeline
+  - name: trigger_test
     steps:
-      - name: first_step
+      - name: trigger_1
         type: Bash
         configuration:
-          inputResources:
-            - name: app1
+          affinityGroup: trigger
+          priority: 0
         execution:
           onExecute:
-            - printenv
-
-
-  #
-  #
-  # - name: ci_pipeline
-  #   steps:
-  #     - name: build
-  #       type: bash
-  #       setup:
-  #         runtime:
-  #           type: image
-  #           image:
-  #            custom:
-  #              name: drydock/u16all
-  #              tag: master
-  #       triggeredBy:
-  #         resources:
-  #           - app
-  #       execution:
-  #         onExecute:
-  #           - pushd $res_app_resourcePath
-  #           - docker build -t app:latest .
-  #
-  #     - name: test
-  #       type: bash
-  #       setup:
-  #         runtime:
-  #           type: image
-  #           image:
-  #            custom:
-  #              name: drydock/u16all
-  #              tag: master
-  #       triggeredBy:
-  #         steps:
-  #           - build
-  #       execution:
-  #         onExecute:
-  #           - docker run --name "test_app" app:latest bash -c "pwd"
-  #           - docker rm -fv "test_app"
-  #
-  #     - name: push
-  #       type: bash
-  #       setup:
-  #         runtime:
-  #           type: image
-  #           image:
-  #            custom:
-  #              name: drydock/u16all
-  #              tag: master
-  #       requires:
-  #         integrations:
-  #           - artDocker
-  #       triggeredBy:
-  #         steps:
-  #           - test
-  #       execution:
-  #         onExecute:
-  #           - docker login -u $int_artDocker_username -p $int_artDocker_password $int_artDocker_url
-  #           - artDockerIp=$(echo $int_artDocker_url | awk -F[/:] '{print $4}')
-  #           - artDockerPort=$(echo $int_artDocker_url | awk -F[/:] '{print $5}')
-  #           - echo "$artDockerIp:$artDockerPort"
-  #           - docker tag app:latest $artDockerIp:$artDockerPort/demo/app:$STEP_ID
-  #           - docker push $artDockerIp:$artDockerPort/demo/app:$STEP_ID
-  #
-  #     - name: job2
-  #       type: bash
-  #       setup:
-  #         runtime:
-  #           type: image
-  #           image:
-  #            custom:
-  #              name: drydock/u16all
-  #              tag: master
-  #
-  #       triggeredBy:
-  #         steps:
-  #           - build
-  #       execution:
-  #         onExecute:
-  #           - echo "job2...."
+            - sleep 60
+            - echo "done"
