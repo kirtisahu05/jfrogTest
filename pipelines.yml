@@ -10,7 +10,7 @@ resources:
   - name: myDockerImg
     type: Image
     configuration:
-      registry: artDocker
+      registry: artifactoryIntegration
       imageName: demo/app
       imageTag: latest
       autoPull: false
