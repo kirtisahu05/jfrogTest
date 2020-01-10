@@ -5,7 +5,7 @@ resources:
        gitProvider: github_kirti	
        path: kirtisahu05/jfrogTest
 pipelines: 
-  - name: state_test
+  - name: state_test_pipe
     steps:
       - name: testReport_u18
         type: Bash
@@ -189,7 +189,7 @@ pipelines:
             - ./echoTest.sh
             - ./echoTest.sh
       
-      - name: run_file_restore
+      - name: run_file_restore_pipe
         type: Bash
         configuration:
           inputSteps:
@@ -197,7 +197,7 @@ pipelines:
         execution:
           onExecute:
             - printenv
-  - name: trigger_test
+  - name: trigger_test_pipe
     steps:
       - name: trigger_1
         type: Bash
