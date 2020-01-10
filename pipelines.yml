@@ -1,5 +1,5 @@
 resources:	
-   - name: gitResource_1	
+   - name: gitRes	
      type: GitRepo	
      configuration:	
        gitProvider: github_kirti	
@@ -11,7 +11,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: gitResource_1
+            - name: gitRes
         execution:
           onExecute:
             - pushd $res_gitResource_1_resourcePath
