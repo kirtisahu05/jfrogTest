@@ -207,6 +207,6 @@ pipelines:
         execution:
           onExecute:
             - sleep 60
-            - sleep 60
-            - sleep 60
+#             - sleep 60
+#             - sleep 60
             - echo "done"
