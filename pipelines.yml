@@ -197,7 +197,7 @@ pipelines:
         execution:
           onExecute:
             - printenv
-  - name: trigger_test_pipe
+  - name: atrigger_test_pipe
     steps:
       - name: trigger_1
         type: Bash
@@ -216,7 +216,7 @@ pipelines:
             - sleep 60
             - sleep 60
             - echo "done"
-  - name: trigger_test_pipe_1
+  - name: atrigger_test_pipe_1
     steps:
       - name: trigger_2
         type: Bash
@@ -227,7 +227,7 @@ pipelines:
           onExecute:
             - sleep 10
             - echo "done"
-  - name: trigger_test_pipe_2
+  - name: atrigger_test_pipe_2
     steps:
       - name: trigger_1
         type: Bash
@@ -238,7 +238,7 @@ pipelines:
           onExecute:
             - sleep 10
             - echo "done"
-  - name: trigger_test_pipe_3
+  - name: atrigger_test_pipe_3
     steps:
       - name: trigger_2
         type: Bash
@@ -249,7 +249,7 @@ pipelines:
           onExecute:
             - sleep 10
             - echo "done"
-  - name: trigger_test_pipe_4
+  - name: atrigger_test_pipe_4
     steps:
       - name: trigger_1
         type: Bash
@@ -260,7 +260,7 @@ pipelines:
           onExecute:
             - sleep 10
             - echo "done"
-  - name: trigger_test_pipe_5
+  - name: atrigger_test_pipe_5
     steps:
       - name: trigger_2
         type: Bash
@@ -271,7 +271,7 @@ pipelines:
           onExecute:
             - sleep 10
             - echo "done"
-  - name: trigger_test_pipe_6
+  - name: atrigger_test_pipe_6
     steps:
       - name: trigger_1
         type: Bash
@@ -282,7 +282,7 @@ pipelines:
           onExecute:
             - sleep 10
             - echo "done"
-  - name: trigger_test_pipe_7
+  - name: atrigger_test_pipe_7
     steps:
       - name: trigger_2
         type: Bash
@@ -293,7 +293,7 @@ pipelines:
           onExecute:
             - sleep 10
             - echo "done"
-  - name: trigger_test_pipe_8
+  - name: atrigger_test_pipe_8
     steps:
       - name: trigger_1
         type: Bash
@@ -304,7 +304,7 @@ pipelines:
           onExecute:
             - sleep 10
             - echo "done"
-  - name: trigger_test_pipe_9
+  - name: atrigger_test_pipe_9
     steps:
       - name: trigger_2
         type: Bash
@@ -315,7 +315,7 @@ pipelines:
           onExecute:
             - sleep 10
             - echo "done"
-  - name: trigger_test_pipe_10
+  - name: atrigger_test_pipe_10
     steps:
       - name: trigger_1
         type: Bash
@@ -326,7 +326,7 @@ pipelines:
           onExecute:
             - sleep 10
             - echo "done"
-  - name: trigger_test_pipe_11
+  - name: atrigger_test_pipe_11
     steps:
       - name: trigger_2
         type: Bash
@@ -337,7 +337,7 @@ pipelines:
           onExecute:
             - sleep 10
             - echo "done"
-  - name: trigger_test_pipe_12
+  - name: atrigger_test_pipe_12
     steps:
       - name: trigger_1
         type: Bash
@@ -348,7 +348,7 @@ pipelines:
           onExecute:
             - sleep 10
             - echo "done"
-  - name: trigger_test_pipe_13
+  - name: atrigger_test_pipe_13
     steps:
       - name: trigger_2
         type: Bash
@@ -359,7 +359,7 @@ pipelines:
           onExecute:
             - sleep 10
             - echo "done"
-  - name: trigger_test_pipe_14
+  - name: atrigger_test_pipe_14
     steps:
       - name: trigger_1
         type: Bash
@@ -370,7 +370,7 @@ pipelines:
           onExecute:
             - sleep 10
             - echo "done"
-  - name: trigger_test_pipe_15
+  - name: atrigger_test_pipe_15
     steps:
       - name: trigger_2
         type: Bash
@@ -381,7 +381,7 @@ pipelines:
           onExecute:
             - sleep 10
             - echo "done"
-  - name: trigger_test_pipe_16
+  - name: atrigger_test_pipe_16
     steps:
       - name: trigger_1
         type: Bash
@@ -392,7 +392,7 @@ pipelines:
           onExecute:
             - sleep 10
             - echo "done"
-  - name: trigger_test_pipe_17
+  - name: atrigger_test_pipe_17
     steps:
       - name: trigger_2
         type: Bash
