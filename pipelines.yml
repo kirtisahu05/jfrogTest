@@ -23,171 +23,6 @@ pipelines:
             - ./echoTest.sh
             - ./echoTest.sh
             - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
-            - ./echoTest.sh
       
       - name: run_file_restore_pipe
         type: Bash
@@ -304,179 +139,179 @@ pipelines:
           onExecute:
             - sleep 10
             - echo "done"
-  - name: atrigger_test_pipe_9
-    steps:
-      - name: trigger_2
-        type: Bash
-        configuration:
-          affinityGroup: trigger
-          priority: 0
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
-  - name: atrigger_test_pipe_10
-    steps:
-      - name: trigger_1
-        type: Bash
-        configuration:
-          affinityGroup: trigger
-          priority: 0
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
-  - name: atrigger_test_pipe_11
-    steps:
-      - name: trigger_2
-        type: Bash
-        configuration:
-          affinityGroup: trigger
-          priority: 0
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
-  - name: atrigger_test_pipe_12
-    steps:
-      - name: trigger_1
-        type: Bash
-        configuration:
-          affinityGroup: trigger
-          priority: 0
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
-  - name: atrigger_test_pipe_13
-    steps:
-      - name: trigger_2
-        type: Bash
-        configuration:
-          affinityGroup: trigger
-          priority: 0
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
-  - name: atrigger_test_pipe_14
-    steps:
-      - name: trigger_1
-        type: Bash
-        configuration:
-          affinityGroup: trigger
-          priority: 0
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
-  - name: atrigger_test_pipe_15
-    steps:
-      - name: trigger_2
-        type: Bash
-        configuration:
-          affinityGroup: trigger
-          priority: 0
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
-  - name: atrigger_test_pipe_16
-    steps:
-      - name: trigger_1
-        type: Bash
-        configuration:
-          affinityGroup: trigger
-          priority: 0
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
-  - name: atrigger_test_pipe_17
-    steps:
-      - name: trigger_2
-        type: Bash
-        configuration:
-          affinityGroup: trigger
-          priority: 0
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
-  - name: trigger_test_pipe_18
-    steps:
-      - name: trigger_1
-        type: Bash
-        configuration:
-          affinityGroup: trigger
-          priority: 0
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
-  - name: trigger_test_pipe_19
-    steps:
-      - name: trigger_2
-        type: Bash
-        configuration:
-          affinityGroup: trigger
-          priority: 0
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
-  - name: trigger_test_pipe_20
-    steps:
-      - name: trigger_1
-        type: Bash
-        configuration:
-          affinityGroup: trigger
-          priority: 0
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
-  - name: trigger_test_pipe_21
-    steps:
-      - name: trigger_2
-        type: Bash
-        configuration:
-          affinityGroup: trigger
-          priority: 0
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
-  - name: trigger_test_pipe_22
-    steps:
-      - name: trigger_1
-        type: Bash
-        configuration:
-          affinityGroup: trigger
-          priority: 0
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
-  - name: trigger_test_pipe_23
-    steps:
-      - name: trigger_2
-        type: Bash
-        configuration:
-          affinityGroup: trigger
-          priority: 0
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
-  - name: trigger_test_pipe_24
-    steps:
-      - name: trigger_1
-        type: Bash
-        configuration:
-          affinityGroup: trigger
-          priority: 0
-        execution:
-          onExecute:
-            - sleep 10
-            - echo "done"
+#   - name: atrigger_test_pipe_9
+#     steps:
+#       - name: trigger_2
+#         type: Bash
+#         configuration:
+#           affinityGroup: trigger
+#           priority: 0
+#         execution:
+#           onExecute:
+#             - sleep 10
+#             - echo "done"
+#   - name: atrigger_test_pipe_10
+#     steps:
+#       - name: trigger_1
+#         type: Bash
+#         configuration:
+#           affinityGroup: trigger
+#           priority: 0
+#         execution:
+#           onExecute:
+#             - sleep 10
+#             - echo "done"
+#   - name: atrigger_test_pipe_11
+#     steps:
+#       - name: trigger_2
+#         type: Bash
+#         configuration:
+#           affinityGroup: trigger
+#           priority: 0
+#         execution:
+#           onExecute:
+#             - sleep 10
+#             - echo "done"
+#   - name: atrigger_test_pipe_12
+#     steps:
+#       - name: trigger_1
+#         type: Bash
+#         configuration:
+#           affinityGroup: trigger
+#           priority: 0
+#         execution:
+#           onExecute:
+#             - sleep 10
+#             - echo "done"
+#   - name: atrigger_test_pipe_13
+#     steps:
+#       - name: trigger_2
+#         type: Bash
+#         configuration:
+#           affinityGroup: trigger
+#           priority: 0
+#         execution:
+#           onExecute:
+#             - sleep 10
+#             - echo "done"
+#   - name: atrigger_test_pipe_14
+#     steps:
+#       - name: trigger_1
+#         type: Bash
+#         configuration:
+#           affinityGroup: trigger
+#           priority: 0
+#         execution:
+#           onExecute:
+#             - sleep 10
+#             - echo "done"
+#   - name: atrigger_test_pipe_15
+#     steps:
+#       - name: trigger_2
+#         type: Bash
+#         configuration:
+#           affinityGroup: trigger
+#           priority: 0
+#         execution:
+#           onExecute:
+#             - sleep 10
+#             - echo "done"
+#   - name: atrigger_test_pipe_16
+#     steps:
+#       - name: trigger_1
+#         type: Bash
+#         configuration:
+#           affinityGroup: trigger
+#           priority: 0
+#         execution:
+#           onExecute:
+#             - sleep 10
+#             - echo "done"
+#   - name: atrigger_test_pipe_17
+#     steps:
+#       - name: trigger_2
+#         type: Bash
+#         configuration:
+#           affinityGroup: trigger
+#           priority: 0
+#         execution:
+#           onExecute:
+#             - sleep 10
+#             - echo "done"
+#   - name: trigger_test_pipe_18
+#     steps:
+#       - name: trigger_1
+#         type: Bash
+#         configuration:
+#           affinityGroup: trigger
+#           priority: 0
+#         execution:
+#           onExecute:
+#             - sleep 10
+#             - echo "done"
+#   - name: trigger_test_pipe_19
+#     steps:
+#       - name: trigger_2
+#         type: Bash
+#         configuration:
+#           affinityGroup: trigger
+#           priority: 0
+#         execution:
+#           onExecute:
+#             - sleep 10
+#             - echo "done"
+#   - name: trigger_test_pipe_20
+#     steps:
+#       - name: trigger_1
+#         type: Bash
+#         configuration:
+#           affinityGroup: trigger
+#           priority: 0
+#         execution:
+#           onExecute:
+#             - sleep 10
+#             - echo "done"
+#   - name: trigger_test_pipe_21
+#     steps:
+#       - name: trigger_2
+#         type: Bash
+#         configuration:
+#           affinityGroup: trigger
+#           priority: 0
+#         execution:
+#           onExecute:
+#             - sleep 10
+#             - echo "done"
+#   - name: trigger_test_pipe_22
+#     steps:
+#       - name: trigger_1
+#         type: Bash
+#         configuration:
+#           affinityGroup: trigger
+#           priority: 0
+#         execution:
+#           onExecute:
+#             - sleep 10
+#             - echo "done"
+#   - name: trigger_test_pipe_23
+#     steps:
+#       - name: trigger_2
+#         type: Bash
+#         configuration:
+#           affinityGroup: trigger
+#           priority: 0
+#         execution:
+#           onExecute:
+#             - sleep 10
+#             - echo "done"
+#   - name: trigger_test_pipe_24
+#     steps:
+#       - name: trigger_1
+#         type: Bash
+#         configuration:
+#           affinityGroup: trigger
+#           priority: 0
+#         execution:
+#           onExecute:
+#             - sleep 10
+#             - echo "done"
