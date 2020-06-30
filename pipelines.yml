@@ -106,957 +106,957 @@ pipelines:
           onExecute:
             - sleep 10
             - echo "done"
-#   - name: atrigger_test_pipe_26
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: atrigger_test_pipe_27
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_28
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_29
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_30
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_31
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_32
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_33
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_34
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
+  - name: atrigger_test_pipe_26
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: atrigger_test_pipe_27
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_28
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_29
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_30
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_31
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_32
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_33
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_34
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
 
-#   - name: atrigger_test_pipe_35
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: atrigger_test_pipe_36
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: atrigger_test_pipe_37
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_38
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_39
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_40
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_41
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_42
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_43
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_44
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: atrigger_test_pipe_45
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: atrigger_test_pipe_46
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: atrigger_test_pipe_47
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_48
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_49
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_50
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_51
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_52
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_53
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_54
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
+  - name: atrigger_test_pipe_35
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: atrigger_test_pipe_36
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: atrigger_test_pipe_37
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_38
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_39
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_40
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_41
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_42
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_43
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_44
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: atrigger_test_pipe_45
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: atrigger_test_pipe_46
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: atrigger_test_pipe_47
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_48
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_49
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_50
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_51
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_52
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_53
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_54
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
 
-#   - name: atrigger_test_pipe_55
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: atrigger_test_pipe_56
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: atrigger_test_pipe_57
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_58
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_59
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_60
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_61
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_62
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_63
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_64
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
+  - name: atrigger_test_pipe_55
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: atrigger_test_pipe_56
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: atrigger_test_pipe_57
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_58
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_59
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_60
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_61
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_62
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_63
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_64
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
 
-#   - name: atrigger_test_pipe_65
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: atrigger_test_pipe_66
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: atrigger_test_pipe_67
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_68
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_69
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_70
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_71
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_72
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_73
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_74
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: atrigger_test_pipe_75
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: atrigger_test_pipe_76
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: atrigger_test_pipe_77
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_78
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_79
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_80
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_81
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_82
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_83
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_84
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
+  - name: atrigger_test_pipe_65
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: atrigger_test_pipe_66
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: atrigger_test_pipe_67
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_68
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_69
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_70
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_71
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_72
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_73
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_74
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: atrigger_test_pipe_75
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: atrigger_test_pipe_76
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: atrigger_test_pipe_77
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_78
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_79
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_80
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_81
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_82
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_83
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_84
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
 
-#   - name: atrigger_test_pipe_85
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: atrigger_test_pipe_86
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: atrigger_test_pipe_87
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_88
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_89
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_90
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_91
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_92
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_93
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_94
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
+  - name: atrigger_test_pipe_85
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: atrigger_test_pipe_86
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: atrigger_test_pipe_87
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_88
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_89
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_90
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_91
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_92
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_93
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_94
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
 
-#   - name: atrigger_test_pipe_95
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: atrigger_test_pipe_96
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: atrigger_test_pipe_97
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_98
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_99
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_100
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_101
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_102
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_103
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_104
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_105
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_106
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_107
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_108
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_109
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_110
-#     steps:
-#       - name: trigger_1
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
-#   - name: trigger_test_pipe_111
-#     steps:
-#       - name: trigger_2
-#         type: Bash
-#         configuration:
-#           affinityGroup: trigger
-#           priority: 0
-#         execution:
-#           onExecute:
-#             - sleep 10
-#             - echo "done"
+  - name: atrigger_test_pipe_95
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: atrigger_test_pipe_96
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: atrigger_test_pipe_97
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_98
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_99
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_100
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_101
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_102
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_103
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_104
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_105
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_106
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_107
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_108
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_109
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_110
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
+  - name: trigger_test_pipe_111
+    steps:
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 10
+            - echo "done"
 #   - name: trigger_test_pipe_112
 #     steps:
 #       - name: trigger_1
